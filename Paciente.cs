@@ -114,12 +114,12 @@ class Paciente{
     }
     public void SalvarResultados(){
         string local = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        string filename = @$"{nome}.txt";
+        string filename = @$"SRS2_{nome}.txt";
         string path = Path.Combine(local, filename);
         int contador = 1;
 
         while(File.Exists(path)){
-            filename = @$"{nome}{contador}.txt";
+            filename = @$"SRS2_{nome}{contador}.txt";
             path = Path.Combine(local, filename);
             contador++;
         }
