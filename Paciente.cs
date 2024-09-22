@@ -111,5 +111,33 @@ class Paciente{
                 }
             }
         }
+    }
+    public void SalvarResultados(){
+        string local = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        string filename = @$"{nome}.txt";
+        string path = Path.Combine(local, filename);
+        int contador = 1;
+
+        while(File.Exists(path)){
+            filename = @$"{nome}{contador}.txt";
+            path = Path.Combine(local, filename);
+            contador++;
+        }
+        if(!File.Exists(path)){
+            using(StreamWriter sw = File.CreateText(path)){
+                for(int i = 0; i < respostas.Length; i++){
+                sw.WriteLine($"Questão {i+1} marcou gabarito {respostas[i]+1}");
+                }
+                sw.WriteLine();
+                sw.WriteLine($"Percepção: {perc}");
+                sw.WriteLine($"Cognição: {cogn}");
+                sw.WriteLine($"Comunicação: {comu}");
+                sw.WriteLine($"Motivação: {moti}");
+                sw.WriteLine($"Padrão: {padr}");
+                sw.WriteLine();
+                sw.WriteLine($"Soma geral: {resultadoGeralBruto()}");
+                Console.WriteLine("Arquivo salvo!");
+            }
+        }
     } 
 }

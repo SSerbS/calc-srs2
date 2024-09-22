@@ -1,0 +1,5 @@
+C:\Users\playe\Documents\GitHub\calc-srs2\bin\Release\net8.0\publish\calc-srs2.exe
+C:\Users\playe\Documents\GitHub\calc-srs2\bin\Release\net8.0\publish\calc-srs2.dll
+C:\Users\playe\Documents\GitHub\calc-srs2\bin\Release\net8.0\publish\calc-srs2.deps.json
+C:\Users\playe\Documents\GitHub\calc-srs2\bin\Release\net8.0\publish\calc-srs2.runtimeconfig.json
+C:\Users\playe\Documents\GitHub\calc-srs2\bin\Release\net8.0\publish\calc-srs2.pdb
